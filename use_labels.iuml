@@ -1,0 +1,10 @@
+@startuml
+actor User
+User -> DocumentStore: get_all_labels_aggregated()
+DocumentStore --> LabelIndex: get Labels
+LabelIndex --> DocumentStore: Labels
+DocumentStore --> DocumentStore: aggregate Labels
+DocumentStore --> User: MultiLabels
+User --> Pipeline: eval(MultiLabels)
+Pipeline --> User: EvaluationResult
+@enduml
