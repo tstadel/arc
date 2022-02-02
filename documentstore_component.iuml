@@ -1,13 +1,15 @@
 @startuml
 package DocumentStore {
-  component document_index_1
-  component document_index_2
-  component label_index_1
-  component label_index_2
-  component label_index_3
+  database doc_1
+  database doc_2
+  database doc_n
+  database label_1
+  database label_2
+  database label_3
+  database label_k
 }
 
-label_index_1 -up-> document_index_1: "documents"
-label_index_2 -up-> document_index_1: "documents"
-label_index_3 -up-> document_index_2: "documents"
+label_1 -up-> doc_1: "documents"
+label_2 -up-> doc_1: "documents"
+label_3 -up-> doc_2: "documents"
 @enduml
