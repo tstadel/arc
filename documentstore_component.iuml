@@ -7,7 +7,7 @@ package DocumentStore {
   component label_index_3
 }
 
-label_index_1 -> document_index_1: "documents"
-label_index_2 -> document_index_1: "documents"
-label_index_3 -> document_index_2: "documents"
+label_index_1 -up-> document_index_1: "documents"
+label_index_2 -up-> document_index_1: "documents"
+label_index_3 -up-> document_index_2: "documents"
 @enduml
