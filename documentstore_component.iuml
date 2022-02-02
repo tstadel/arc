@@ -9,7 +9,7 @@ package DocumentStore {
   component label_index_j
 }
 
-label_index_1 -[documents]-> document_index_1
-label_index_2 -[documents]-> document_index_1
-label_index_3 -[documents]-> document_index_2
+label_index_1 --> document_index_1
+label_index_2 --> document_index_1
+label_index_3 --> document_index_2
 @enduml
