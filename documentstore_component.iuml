@@ -5,6 +5,7 @@ package DocumentStore {
   component document_index_n
   component label_index_1
   component label_index_2
+  component label_index_3
   component label_index_j
 }
 
