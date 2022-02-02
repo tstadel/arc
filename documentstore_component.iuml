@@ -1,6 +1,14 @@
 @startuml
-component testA
-component testB
+package DocumentStore {
+  component document_index_1
+  component document_index_2
+  component document_index_n
+  component label_index_1
+  component label_index_2
+  component label_index_j
+}
 
-testA -> testB
+label_index_1 -[documents]-> document_index_1
+label_index_2 -[documents]-> document_index_1
+label_index_3 -[documents]-> document_index_2
 @enduml
