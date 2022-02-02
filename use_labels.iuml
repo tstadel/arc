@@ -6,5 +6,9 @@ LabelIndex --> DocumentStore: Labels
 DocumentStore --> DocumentStore: aggregate Labels
 DocumentStore --> User: MultiLabels
 User --> Pipeline: eval(MultiLabels)
+Pipeline --> DocumentStore: query
+DocumentStore --> DocumentIndex: query
+DocumentIndex --> DocumentStore: result
+DocumentStore --> Pipeline: result
 Pipeline --> User: EvaluationResult
 @enduml
