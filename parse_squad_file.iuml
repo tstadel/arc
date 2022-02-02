@@ -1,5 +1,6 @@
 @startuml
-User -> DocumentStore: add_eval_data / SQuAD file
+actor User
+User -> DocumentStore: add_eval_data(SQuAD_file)
 DocumentStore --> Preprocessor: preprocess Context
 Preprocessor --> DocumentStore: Documents
 DocumentStore --> DocumentStore: generate Labels
